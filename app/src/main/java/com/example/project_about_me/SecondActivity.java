@@ -4,11 +4,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class SecondActivity extends AppCompatActivity {
+import com.example.project_about_me.databinding.ActivityMainBinding;
+import com.example.project_about_me.databinding.ActivitySecondBinding;
 
+public class SecondActivity extends AppCompatActivity {
+    private ActivitySecondBinding binding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_second);
+        binding = ActivitySecondBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
     }
 }
