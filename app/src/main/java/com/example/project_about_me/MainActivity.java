@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         binding.textViewAboutMe.setText("Hola! Mi nombre es Florencia Hidalgo Alarcón, soy enfermera de profesión y estudiante de Android Developer.");
         binding.textViewExpNurse.setText("Poseo 1 año de experiencia como enfermera.");
         binding.textViewExpDevelop.setText("Llevo 3 meses como estudiante de Android Developer.");
-        binding.textViewMoti.setText("Me motiva poder trabajar en el area de la programación.");
+        binding.textViewMoti.setText("Me motiva poder trabajar en el área de la programación.");
     }
     private void initListeners() {
         binding.buttonContact.setOnClickListener(new View.OnClickListener() {

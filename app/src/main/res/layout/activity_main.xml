@@ -92,6 +92,7 @@
         android:id="@+id/buttonContact"
         android:layout_width="62dp"
         android:layout_height="69dp"
+        android:contentDescription="FotoFlorencia"
         app:layout_constraintBottom_toBottomOf="@+id/imageViewFlo"
         app:layout_constraintEnd_toEndOf="@+id/imageViewFlo"
         app:layout_constraintHorizontal_bias="0.42"

@@ -24,16 +24,17 @@ public class SecondActivity extends AppCompatActivity {
         binding.buttonLinkedin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intentLinke = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.linkedin.com//in/florencia-hidalgo-83315a1ab"));
-                startActivity(intentLinke);
+                Intent intentLinkedin = new Intent(Intent.ACTION_VIEW);
+                intentLinkedin.setData(Uri.parse("https://www.google.com/"));
+                startActivity(intentLinkedin);
             }
         });
         binding.buttonWhat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intentWhat = new Intent(Intent.ACTION_VIEW, Uri.parse("https://api.whatsapp.com/send?phone=+56990561282"));
+                Intent intentWhat = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:990909090"));
                 startActivity(intentWhat);
-            }
+                }
         });
         binding.buttonSend.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,8 +44,6 @@ public class SecondActivity extends AppCompatActivity {
         });
 
     }
-
-
     protected void sendEmail() {
         String[] TO = {"f.hidalgoalarcon@gmail.com"};
         String[] CC = {""};
@@ -53,10 +52,9 @@ public class SecondActivity extends AppCompatActivity {
         emailIntent.setType("text/plain");
         emailIntent.putExtra(Intent.EXTRA_EMAIL, TO);
         emailIntent.putExtra(Intent.EXTRA_CC, CC);
-        emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Your subject");
-        emailIntent.putExtra(Intent.EXTRA_TEXT, "Email message");
+        emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Contact from mi app");
+        emailIntent.putExtra(Intent.EXTRA_TEXT, binding.editTextMessage.getText());
         startActivity(Intent.createChooser(emailIntent, "Send Mail"));
         finish();
-
     }
 }
