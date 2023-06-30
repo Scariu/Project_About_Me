@@ -44,7 +44,7 @@ public class SecondActivity extends AppCompatActivity {
 
     }
     protected void sendEmail() {
-        String[] TO = {"f.hidalgoalarcon@gmail.com"};
+        String[] TO = {"f.xxxxxxxxxx@gmail.com"};
         String[] CC = {""};
         Intent emailIntent = new Intent(Intent.ACTION_SEND);
         emailIntent.setData(Uri.parse("mail"));
