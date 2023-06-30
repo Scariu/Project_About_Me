@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         binding.textViewMoti.setText("Me motiva poder trabajar en el area de la programación.");
     }
     private void initListeners() {
-        binding.imageButtonShare.setOnClickListener(new View.OnClickListener() {
+        binding.buttonContact.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getBaseContext(), SecondActivity.class);
