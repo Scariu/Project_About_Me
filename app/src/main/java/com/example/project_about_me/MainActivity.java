@@ -16,7 +16,14 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         initListeners();
+        textViewContent();
+    }
 
+    private void textViewContent(){
+        binding.textViewAboutMe.setText("Hola! Mi nombre es Florencia Hidalgo Alarcón, soy enfermera de profesión y estudiante de Android Developer.");
+        binding.textViewExpNurse.setText("Poseo 1 año de experiencia como enfermera.");
+        binding.textViewExpDevelop.setText("Llevo 3 meses como estudiante de Android Developer.");
+        binding.textViewMoti.setText("Me motiva poder trabajar en el area de la programación.");
     }
     private void initListeners() {
         binding.imageButtonShare.setOnClickListener(new View.OnClickListener() {
