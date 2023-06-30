@@ -24,8 +24,7 @@ public class SecondActivity extends AppCompatActivity {
         binding.buttonLinkedin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intentLinkedin = new Intent(Intent.ACTION_VIEW);
-                intentLinkedin.setData(Uri.parse("https://www.google.com/"));
+                Intent intentLinkedin = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.linkedin.com/"));
                 startActivity(intentLinkedin);
             }
         });
